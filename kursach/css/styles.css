@@ -1,0 +1,62 @@
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: rgb(0, 0, 0); /* Цвет текста по умолчанию */
+}
+
+.navbar-nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Высота линии */
+    background-color: transparent; /* Цвет линии по умолчанию */
+    transform: scaleX(0); /* Начальное значение для анимации */
+    transform-origin: bottom right; /* Начальное положение для анимации */
+    transition: transform 0.3s ease-in-out; /* Время и функция анимации */
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+    transform: scaleX(1); /* Значение при наведении для анимации */
+    transform-origin: bottom left; /* Конечное положение для анимации */
+    background-color: rgb(225, 225, 225); /* Цвет линии при наведении */
+}
+
+.map {
+	width: 1000px;
+	height: 550px;
+	background-color: #c2c2c2;
+    border-radius: 4px;
+    padding: 0.3%;
+    margin: 0 auto; /* Устанавливаем автоматичесные отступы по бокам */
+    display: block; /* По умолчанию у блочных элементов */
+    margin-bottom: 0%;
+}
+
+[class*="copyrights-pane"] {
+	display: none !important;
+}
+
+#left_text, #middle_text, #right_text{
+  float:left;
+  color: #728461;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#middle_text {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.container1 {
+    max-width: 900px; /* Любое значение ширины, которое вам нужно */
+    margin: 0 auto; /* Центрирование на странице */
+    margin-bottom: 40px;
+}
+
+.flex1 {
+    display: flex;
+    justify-content: space-between;
+}
+

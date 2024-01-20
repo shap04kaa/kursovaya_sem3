@@ -1,0 +1,50 @@
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: rgb(0, 0, 0); /* Цвет текста по умолчанию */
+}
+
+.navbar-nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Высота линии */
+    background-color: transparent; /* Цвет линии по умолчанию */
+    transform: scaleX(0); /* Начальное значение для анимации */
+    transform-origin: bottom right; /* Начальное положение для анимации */
+    transition: transform 0.3s ease-in-out; /* Время и функция анимации */
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+    transform: scaleX(1); /* Значение при наведении для анимации */
+    transform-origin: bottom left; /* Конечное положение для анимации */
+    background-color: rgb(225, 225, 225); /* Цвет линии при наведении */
+}
+
+
+tbody tr {
+    transition: background-color 0.3s ease; /* Плавный переход цвета в течение 0.3 секунды с эффектом "ease" */
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5; /* Цвет фона при наведении */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Это обеспечивает, чтобы flex-контейнер занимал весь видимый экран */
+}
+
+main {
+    flex: 1; /* Это заставляет основной контент занимать все доступное пространство */
+}
+
+footer {
+    margin-top: auto; /* Это заставляет футер быть внизу, даже если контент небольшой или отсутствует */
+}
+
+tbody tr:hover {
+    background-color: #dfdfdf; /* Измените цвет на тот, который вам нравится */
+}
